@@ -1,14 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Home from './pages/Home';
-import CadastroVideo from './pages/cadastro/Video';
 
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import CadastroVideo from './pages/cadastro/Video';
 import CadastroCategoria from './pages/cadastro/Categoria';
-import jogo from './pages/notFound/jogo';
+import Page404 from './pages/Page404';
 
-//desafio master blaster -> fazer
 const Pagina404 = () => (<div>Página 404</div>)
 
 ReactDOM.render(
@@ -17,7 +16,8 @@ ReactDOM.render(
       <Route path="/" component={Home} exact />
       <Route path="/cadastro/video" component={CadastroVideo} />
       <Route path="/cadastro/categoria" component={CadastroCategoria} />
-      <Route component={jogo} /> {/*carrega se não achar rota*/}
+      <Route path="/jogo/flappy" component={Page404}/>
+      <Route component={Pagina404} /> {/*carrega se não achar rota*/}
     </Switch>
   </BrowserRouter>,
   document.getElementById('root')

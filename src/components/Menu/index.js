@@ -11,6 +11,10 @@ function Menu() {
                 <img className="Logo" src={Logo} alt="xilflix logo" />
             </Link>
 
+            <Button as={Link} className="ButtonLink" to="/jogo/flappy">
+                FlappyBirds
+            </Button>
+
             <Button as={Link} className="ButtonLink" to="/cadastro/video">
                 Novo vídeo
             </Button>
